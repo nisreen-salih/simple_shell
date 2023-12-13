@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char *input = Null
-		int exit_status = 0;
+	char *input = NULL;
+	int exit_status = 0;
 	int is_interactive = isatty(STDIN_FILENO);
 
 	while (1)
@@ -18,7 +18,7 @@ int main(void)
 		}
 		input = read_input();
 
-		if (input == Null)
+		if (input == NULL)
 		{
 			if (is_interactive)
 				continue;
