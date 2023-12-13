@@ -53,4 +53,43 @@ void clean_input(char *input, char *output)
 		input++;
 	} output[i] = '\0';
 }
+/**
+ * read_input: the point entry of the code
+ *
+ * Return: 0 Success
+ *
+*/
+char read_input(void)
+{
+	char *input = Null;
+	char *output = Null;
+	size_t input_size = 0;
+	ssize_t read;
 
+	while (1)
+	{
+		read = getline(&input, &input_size, stdin);
+		if (read == -1)
+		{
+			free(input);
+			exit(EXIT_SUCCESS);
+		}
+		input[strcspn(input, "\n")] = '\0';
+
+		if (input[0] == '#')
+		{
+			free(input);
+			return (strdup(" "));
+		}
+		break;
+	}
+	output = malloc(sizeof(char) * (strlen(input) + 1));
+	if (output == Null)
+	{
+		free(input);
+		return (Null);
+	}
+	clean_input(input, output);
+	free(input);
+	return (output);
+}

@@ -11,7 +11,8 @@
 void propmt(void);
 char clean_input(char *input, char *output);
 char *read_input(void);
-
+char *get_location(char *command);
+int extract_args(char *input, char*args[16]);
 
 
 
