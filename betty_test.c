@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
  * main - print pointer
  *
@@ -8,11 +8,7 @@
 
 int main(void)
 {
-	int x = 5;
-	int *p = &x;
-
-	printf("%p \n", p);
-	printf("%d\n ", *p);
+	write(1, "Shell project\n", 15);
 
 	return (0);
 }
