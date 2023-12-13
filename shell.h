@@ -8,6 +8,8 @@
 #include <sys/star.h>
 #include <sys/wait.h>
 #define BUFFER_SIZE 1024
+
+
 void propmt(void);
 char clean_input(char *input, char *output);
 char *read_input(void);
