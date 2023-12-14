@@ -22,9 +22,9 @@ int main(void)
 		ctd = getline(&input, &buf, stdin);
 		if (ctd == -1)
 		{
-			write(1, "\n", 1);
 			break;
 		}
+
 	}
 	return (0);
 }
