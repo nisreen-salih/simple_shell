@@ -8,10 +8,7 @@
 
 int main(void)
 {
-	int i = 0;
 	char *input;
-	char **arr = NULL;
-	char *tok;
 	size_t buf;
 	ssize_t ctd;
 
@@ -28,18 +25,6 @@ int main(void)
 			write(1, "\n", 1);
 			break;
 		}
-		tok = strtok(input, " ");
-		while (tok != NULL)
-		{
-			arr[i] = tok;
-			tok = strtok(NULL, " ");
-			i++;
-		}
-		arr[i] = NULL;
-		execve(input, arr, NULL);
-
-
 	}
-	free(input);
 	return (0);
 }
